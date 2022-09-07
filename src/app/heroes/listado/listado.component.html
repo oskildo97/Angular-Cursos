@@ -1,0 +1,29 @@
+
+
+<div *ngIf="futbolBorrado; else noBorrado">
+
+    <h3>Futbol Borrado: <small>{{ futbolBorrado }}</small></h3>
+    
+</div>
+
+<ng-template #noBorrado>
+
+    <h3>No ha Borrado Nada.</h3>
+    
+</ng-template>
+
+
+
+<button (click)="borrarfutbol()">
+    Borrar
+
+</button>
+
+<ul>
+
+    <li *ngFor="let futbol of futbol; let i = index">
+
+        {{ i + 1 }} - {{ futbol }}
+    </li>
+</ul>
+
